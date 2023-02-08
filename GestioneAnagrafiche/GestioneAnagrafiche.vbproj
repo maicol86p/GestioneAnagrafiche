@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>AnagraficheDAA</RootNamespace>
     <AssemblyName>AnagraficheDAA</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
@@ -35,6 +35,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,11 +43,12 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <IncrementalBuild>true</IncrementalBuild>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\ACSI\Svi\ACSINuovo\Exe\DAA Fase 4.0\</OutputPath>
     <DocumentationFile>AnagraficheDAA.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314,42353,42354,42355</NoWarn>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,20 +60,13 @@
     <DocumentationFile>AnagraficheDAA.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314,42353,42354,42355</NoWarn>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="C1.Win.C1List.2, Version=2.1.20092.156, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc" />
     <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20092.61165, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
-    <Reference Include="FlexGroup, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Librerie\FlexGroup\FlexGroup\bin\Release\FlexGroup.dll</HintPath>
-    </Reference>
-    <Reference Include="FunzioniIntegra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Librerie\FunzioniIntegra\FunzioniIntegra\bin\Release\FunzioniIntegra.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -148,6 +143,14 @@
     <ProjectReference Include="..\..\webacsi\Integra.WebAcsi.csproj">
       <Project>{D616C251-2B4E-49D5-B7CE-3B9390144C72}</Project>
       <Name>Integra.WebAcsi</Name>
+    </ProjectReference>
+    <ProjectReference Include="\\vec-srv-sviluppo\SRV2008\SVILUPPO\Librerie\FlexGroup\FlexGroup\FlexGroup.vbproj">
+      <Project>{ca944aab-2068-4d44-9808-8c146c8670d9}</Project>
+      <Name>FlexGroup</Name>
+    </ProjectReference>
+    <ProjectReference Include="\\vec-srv-sviluppo\SRV2008\SVILUPPO\Librerie\FunzioniIntegra\FunzioniIntegra\FunzioniIntegra.vbproj">
+      <Project>{087a0764-9646-4c9b-9846-9af41ebdd071}</Project>
+      <Name>FunzioniIntegra</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
